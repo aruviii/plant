@@ -3,7 +3,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+import django_heroku
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-nesmxqhj^%ehz)xi$(l-9*!6@s09ahv-=z*h@d%67zs2-wcfrx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aruviiplant.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -114,3 +114,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
